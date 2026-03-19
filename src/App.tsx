@@ -70,9 +70,7 @@ function App() {
           </div>
 
           <p className="terms-note">
-            Para Android, asegúrate de habilitar "Orígenes desconocidos". Para
-            iOS, es posible que requieras de un perfil aprovisionado o instalar
-            vía TestFlight.
+            Para Android, asegúrate de habilitar "Orígenes desconocidos".
           </p>
         </div>
 
