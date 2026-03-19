@@ -49,7 +49,7 @@ function App() {
             </a>
 
             {/* Download iOS */}
-            <a
+            {/* <a
               href="https://testflight.apple.com/join/placeholder"
               target="_blank"
               rel="noopener noreferrer"
@@ -66,7 +66,7 @@ function App() {
                 <span className="btn-text-small">Descargar en</span>
                 <span>iOS / iPadOS</span>
               </div>
-            </a>
+            </a> */}
           </div>
 
           <p className="terms-note">
