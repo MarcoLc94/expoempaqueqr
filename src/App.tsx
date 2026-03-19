@@ -31,9 +31,10 @@ function App() {
           <div className="btn-group">
             {/* Download Android */}
             <a
-              href="/expo_empaque.apk"
+              href="https://github.com/MarcoLc94/expoempaqueqr/releases/download/apk/expo_empaque.apk"
               className="btn btn-android"
-              download="expo_empaque.apk"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <svg
                 className="btn-icon"
