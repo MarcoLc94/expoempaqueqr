@@ -1,0 +1,230 @@
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.glass-card {
+  background: rgba(20, 22, 35, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 32px;
+  overflow: hidden;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse; /* image top on mobile */
+  position: relative;
+}
+
+.card-content {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-visuals {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, rgba(14,224,255,0.05), transparent 70%);
+}
+
+.hero-image-wrapper {
+  animation: float 6s ease-in-out infinite;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(12, 224, 255, 0.3));
+  border-radius: 20px; /* if it's not a transparent image, we curve it */
+  object-fit: cover;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(14, 224, 255, 0.1);
+  color: var(--primary);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  align-self: center;
+  border: 1px solid rgba(14, 224, 255, 0.2);
+}
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff, #a8c1f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title span {
+  display: block;
+  font-size: 3rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  border-radius: 16px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.btn-android {
+  background: linear-gradient(135deg, #0dc268, #008744);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(13, 194, 104, 0.4);
+}
+
+.btn-ios {
+  background: linear-gradient(135deg, #1f212a, #0b0c10);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.btn-text-small {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.terms-note {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .app-container {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .glass-card {
+    flex-direction: row;
+    padding: 1rem;
+  }
+  
+  .card-content {
+    flex: 1;
+    text-align: left;
+    padding: 4rem;
+  }
+  
+  .card-visuals {
+    flex: 1;
+  }
+  
+  .badge {
+    align-self: flex-start;
+  }
+  
+  .description {
+    margin-left: 0;
+  }
+  
+  .btn-group {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  
+  .btn {
+    width: auto;
+    min-width: 240px;
+  }
+}
