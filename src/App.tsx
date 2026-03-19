@@ -28,7 +28,7 @@ function App() {
           
           <div className="btn-group">
             {/* Download Android */}
-            <a href="/downloads/expo-empaque.apk" className="btn btn-android" download>
+            <a href="/expo_empaque.apk" className="btn btn-android" download="expo_empaque.apk">
               <svg className="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.65 10.39l1.83-3.17c.05-.1.01-.23-.08-.28-.1-.05-.22-.01-.28.08l-1.85 3.2c-1.63-.74-3.41-1.15-5.27-1.15-1.86 0-3.64.41-5.27 1.15l-1.85-3.2c-.06-.09-.18-.13-.28-.08-.09.05-.13.18-.08.28l1.83 3.17C3.12 12.44 1 16.03 1 20.25v.75h22v-.75c0-4.22-2.12-7.81-5.35-9.86zM8 17.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm8 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
               </svg>
